@@ -8,6 +8,7 @@
 #define IDD_WEEK05MFCCOUNTER_DIALOG     102
 #define IDR_MAINFRAME                   128
 #define IDC_BUTTON1                     1000
+#define IDC_BTN_ADD                     1000
 #define IDC_COUNT                       1001
 
 // Next default values for new objects
