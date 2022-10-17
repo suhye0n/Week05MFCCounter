@@ -52,19 +52,22 @@ END_MESSAGE_MAP()
 
 CWeek05MFCCounterDlg::CWeek05MFCCounterDlg(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_WEEK05MFCCOUNTER_DIALOG, pParent)
+	, txtCount(_T("0"))
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CWeek05MFCCounterDlg::DoDataExchange(CDataExchange* pDX)
+void CWeek05MFCCounterDlg::DoDataExchange(CDataExchange* pDX) // DoDataExchange -> 다이얼로그에서 매우 중요 함수, 시험!! (두 데이터 교환하라)
 {
 	CDialogEx::DoDataExchange(pDX);
+	DDX_Text(pDX, IDC_COUNT, txtCount);
 }
 
 BEGIN_MESSAGE_MAP(CWeek05MFCCounterDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BTN_ADD, &CWeek05MFCCounterDlg::OnAdd)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +156,11 @@ HCURSOR CWeek05MFCCounterDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CWeek05MFCCounterDlg::OnAdd()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	// GetDlgItem(IDC_COUNT)->SetWindowTextW(L"눌렸습니다");
+	txtCount = "100";
+}
