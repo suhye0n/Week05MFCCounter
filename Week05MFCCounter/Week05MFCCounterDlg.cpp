@@ -162,5 +162,8 @@ void CWeek05MFCCounterDlg::OnAdd()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	// GetDlgItem(IDC_COUNT)->SetWindowTextW(L"눌렸습니다");
-	txtCount = "100";
+	// txtCount = "100";
+	txtCount.Format(L"%d", ++CountValue);
+	TRACE1("txtCount=&s", txtCount);
+	UpdateData(FALSE); // 시험에서 UpdateDate와 혼동 x, 화면에 있는걸 변수로 가져오는게 True
 }

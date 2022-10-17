@@ -8,6 +8,9 @@
 // CWeek05MFCCounterDlg 대화 상자
 class CWeek05MFCCounterDlg : public CDialogEx
 {
+protected:
+	int CountValue = 0;
+
 // 생성입니다.
 public:
 	CWeek05MFCCounterDlg(CWnd* pParent = nullptr);	// 표준 생성자입니다.
